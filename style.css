@@ -9,6 +9,7 @@ body {
   position: relative;
   background-color: hsl(240, 78%, 98%);
   isolation: isolate;
+  min-height: 100vh;
 }
 
 .top-image {
