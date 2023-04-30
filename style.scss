@@ -1,6 +1,3 @@
-// lear
-// Pricing Component
-
 * {
   margin: 0;
   padding: 0;
@@ -8,22 +5,12 @@
   font-family: "Montserrat", sans-serif;
 }
 
-// Colors
-$lightBlue: hsl(237, 63%, 64%);
-$linearGradient: hsl(236, 72%, 79%), hsl(237, 63%, 64%);
-$veryLightGrayishBlue: hsl(240, 78%, 98%);
-$lightGrayishBlue: hsl(234, 14%, 74%);
-$grayishBlue: hsl(233, 13%, 49%);
-$darkGrayishBlue: hsl(232, 13%, 33%);
-$white: hsl(0, 0, 100%);
-
 body {
   position: relative;
-  background-color: $veryLightGrayishBlue;
+  background-color: hsl(240, 78%, 98%);
   isolation: isolate;
 }
 
-// Top Image
 .top-image {
   position: absolute;
   top: 0;
@@ -31,180 +18,156 @@ body {
   z-index: -1;
 }
 
-// Main Content
 .main-content {
   text-align: center;
   padding: 2.5rem 5%;
   max-width: 70rem;
   margin: auto;
-
-  .title {
-    color: $grayishBlue;
-  }
-
-  .top-section {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 3.5rem 0;
-    gap: 1.5rem;
-
-    .period {
-      font-size: 0.925rem;
-      color: $lightGrayishBlue;
-
-      &.active {
-        color: $darkGrayishBlue;
-      }
-    }
-
-    .switch-btn {
-      display: grid;
-      place-content: center left;
-      width: 64px;
-      height: 32px;
-      background-image: linear-gradient($linearGradient);
-      border-radius: 2rem;
-      -webkit-border-radius: 2rem;
-      -moz-border-radius: 2rem;
-      -ms-border-radius: 2rem;
-      -o-border-radius: 2rem;
-      padding-left: 0.25rem;
-      cursor: pointer;
-
-      &.active {
-        padding-left: 0;
-        padding-right: 0.25rem;
-
-        .circle {
-          transform: translateX(calc(34px));
-          -webkit-transform: translateX(calc(34px));
-          -moz-transform: translateX(calc(34px));
-          -ms-transform: translateX(calc(34px));
-          -o-transform: translateX(calc(34px));
-        }
-      }
-
-      .circle {
-        background-color: $white;
-        width: 26px;
-        height: 26px;
-        border-radius: 50%;
-        -webkit-border-radius: 50%;
-        -moz-border-radius: 50%;
-        -ms-border-radius: 50%;
-        -o-border-radius: 50%;
-        transition: 0.3s;
-        -webkit-transition: 0.3s;
-        -moz-transition: 0.3s;
-        -ms-transition: 0.3s;
-        -o-transition: 0.3s;
-      }
-    }
-  }
-
-  .row {
-    display: flex;
-    align-items: center;
-
-    .item {
-      flex-basis: 100%;
-      padding: 2rem;
-      border-radius: 0.75rem;
-      -webkit-border-radius: 0.75rem;
-      -moz-border-radius: 0.75rem;
-      -ms-border-radius: 0.75rem;
-      -o-border-radius: 0.75rem;
-      background-color: $white;
-      box-shadow: 0 0 1rem $veryLightGrayishBlue;
-
-      .name {
-        color: $grayishBlue;
-      }
-
-      .price {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 0.5rem;
-        font-size: 2rem;
-        color: $darkGrayishBlue;
-        font-weight: 700;
-        padding: 0.55rem 0 1.1rem;
-        border-bottom: 1px solid $lightGrayishBlue;
-
-        span {
-          font-size: 3.5rem;
-
-          .hidden-price {
-            display: none;
-
-            &.active {
-              display: inline-block;
-            }
-          }
-        }
-      }
-
-      .offer {
-        color: $grayishBlue;
-        padding: 1.1rem 0;
-        border-bottom: 1px solid $lightGrayishBlue;
-      }
-
-      .btn {
-        margin-top: 2rem;
-        width: 100%;
-        padding: 0.8rem;
-        background: linear-gradient($linearGradient);
-        border: none;
-        border-radius: 0.35rem;
-        -webkit-border-radius: 0.35rem;
-        -moz-border-radius: 0.35rem;
-        -ms-border-radius: 0.35rem;
-        -o-border-radius: 0.35rem;
-        color: $white;
-        cursor: pointer;
-        text-transform: uppercase;
-        font-weight: 700;
-        letter-spacing: 2.5px;
-        font-size: 0.725rem;
-
-        &:hover {
-          color: $lightBlue;
-          background: $white;
-          outline: 1px solid $lightBlue;
-        }
-      }
-
-      &.center {
-        padding: 3rem 2rem;
-        background-image: linear-gradient($linearGradient);
-        z-index: 2;
-
-        .name,
-        .price,
-        .offer {
-          color: $white;
-          border-color: $white;
-        }
-
-        .btn {
-          background: $white;
-          color: $lightBlue;
-
-          &:hover {
-            outline: 1px solid $white;
-            color: $white;
-            background: transparent;
-          }
-        }
-      }
-    }
-  }
+}
+.main-content .title {
+  color: hsl(233, 13%, 49%);
+}
+.main-content .top-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3.5rem 0;
+  gap: 1.5rem;
+}
+.main-content .top-section .period {
+  font-size: 0.925rem;
+  color: hsl(234, 14%, 74%);
+}
+.main-content .top-section .period.active {
+  color: hsl(232, 13%, 33%);
+}
+.main-content .top-section .switch-btn {
+  display: grid;
+  place-content: center left;
+  width: 64px;
+  height: 32px;
+  background-image: linear-gradient(hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+  border-radius: 2rem;
+  -webkit-border-radius: 2rem;
+  -moz-border-radius: 2rem;
+  -ms-border-radius: 2rem;
+  -o-border-radius: 2rem;
+  padding-left: 0.25rem;
+  cursor: pointer;
+}
+.main-content .top-section .switch-btn.active {
+  padding-left: 0;
+  padding-right: 0.25rem;
+}
+.main-content .top-section .switch-btn.active .circle {
+  transform: translateX(34px);
+  -webkit-transform: translateX(34px);
+  -moz-transform: translateX(34px);
+  -ms-transform: translateX(34px);
+  -o-transform: translateX(34px);
+}
+.main-content .top-section .switch-btn .circle {
+  background-color: hsl(0, 0%, 100%);
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  transition: 0.3s;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+}
+.main-content .row {
+  display: flex;
+  align-items: center;
+}
+.main-content .row .item {
+  flex-basis: 100%;
+  padding: 2rem;
+  border-radius: 0.75rem;
+  -webkit-border-radius: 0.75rem;
+  -moz-border-radius: 0.75rem;
+  -ms-border-radius: 0.75rem;
+  -o-border-radius: 0.75rem;
+  background-color: hsl(0, 0%, 100%);
+  box-shadow: 0 0 1rem hsl(240, 78%, 98%);
+}
+.main-content .row .item .name {
+  color: hsl(233, 13%, 49%);
+}
+.main-content .row .item .price {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  font-size: 2rem;
+  color: hsl(232, 13%, 33%);
+  font-weight: 700;
+  padding: 0.55rem 0 1.1rem;
+  border-bottom: 1px solid hsl(234, 14%, 74%);
+}
+.main-content .row .item .price span {
+  font-size: 3.5rem;
+}
+.main-content .row .item .price span .hidden-price {
+  display: none;
+}
+.main-content .row .item .price span .hidden-price.active {
+  display: inline-block;
+}
+.main-content .row .item .offer {
+  color: hsl(233, 13%, 49%);
+  padding: 1.1rem 0;
+  border-bottom: 1px solid hsl(234, 14%, 74%);
+}
+.main-content .row .item .btn {
+  margin-top: 2rem;
+  width: 100%;
+  padding: 0.8rem;
+  background: linear-gradient(hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+  border: none;
+  border-radius: 0.35rem;
+  -webkit-border-radius: 0.35rem;
+  -moz-border-radius: 0.35rem;
+  -ms-border-radius: 0.35rem;
+  -o-border-radius: 0.35rem;
+  color: hsl(0, 0%, 100%);
+  cursor: pointer;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 2.5px;
+  font-size: 0.725rem;
+}
+.main-content .row .item .btn:hover {
+  color: hsl(237, 63%, 64%);
+  background: hsl(0, 0%, 100%);
+  outline: 1px solid hsl(237, 63%, 64%);
+}
+.main-content .row .item.center {
+  padding: 3rem 2rem;
+  background-image: linear-gradient(hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+  z-index: 2;
+}
+.main-content .row .item.center .name,
+.main-content .row .item.center .price,
+.main-content .row .item.center .offer {
+  color: hsl(0, 0%, 100%);
+  border-color: hsl(0, 0%, 100%);
+}
+.main-content .row .item.center .btn {
+  background: hsl(0, 0%, 100%);
+  color: hsl(237, 63%, 64%);
+}
+.main-content .row .item.center .btn:hover {
+  outline: 1px solid hsl(0, 0%, 100%);
+  color: hsl(0, 0%, 100%);
+  background: transparent;
 }
 
-// Bottom Image
 .bottom-image {
   position: absolute;
   bottom: 0;
@@ -212,15 +175,13 @@ body {
   z-index: -1;
 }
 
-// For Smaller Devices
 @media screen and (max-width: 968px) {
   .row {
     flex-direction: column;
     gap: 2.5rem;
-
-    .item {
-      padding: 2rem !important;
-      width: min(320px, 100%);
-    }
   }
-}
+  .row .item {
+    padding: 2rem !important;
+    width: min(320px, 100%);
+  }
+}/*# sourceMappingURL=style.css.map */
