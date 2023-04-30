@@ -94,6 +94,7 @@ body {
   -ms-border-radius: 0.75rem;
   -o-border-radius: 0.75rem;
   background-color: hsl(0, 0%, 100%);
+  box-shadow: 0 0 1rem hsl(240, 78%, 98%);
 }
 .main-content .row .item .name {
   color: hsl(233, 13%, 49%);
@@ -149,6 +150,7 @@ body {
 .main-content .row .item.center {
   padding: 3rem 2rem;
   background-image: linear-gradient(hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+  z-index: 2;
 }
 .main-content .row .item.center .name,
 .main-content .row .item.center .price,
